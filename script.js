@@ -33,14 +33,14 @@ function sendMail(params) {
   
     // typing animation script
     var typed = new Typed(".typing", {
-      strings: ["Aspiring Full Stack Web Developer"],
+      strings: ["Aspiring Frontend Developer"],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true,
       fadeOut: true,
     });
     var typed = new Typed(".typing-2", {
-      strings: ["Full Stack Web Developer"],
+      strings: ["Frontend Developer"],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true,
