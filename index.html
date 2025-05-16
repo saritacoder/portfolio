@@ -1,625 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarita Kumari | Portfolio.</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/IonicaBizau/github-calender/gh-pages/dist/github-calendar.min.js"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-    />
-    <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarita Kumari | Frontend Developer</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpg" href="image/portfo.1.jpg">
+</head>
+<body>
+  <!-- Background Animation -->
+  <div class="background-animation">
+    <div class="gradient-bg"></div>
+    <div class="particles"></div>
+    <div class="animated-gradient"></div>
+  </div>
 
-    <!-- FAVICON -->
-    <link
-      class="favicon"
-      rel="icon"
-      type="image/img"
-      sizes="32x32"
-      href="image/portfo.1.jpg"
-    />
+  <!-- Cursor Animation -->
+  <div class="cursor-container">
+    <div class="cursor-dot"></div>
+  </div>
 
-    <!-- Google material icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-
-
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-    <!-- FONT AWESOME -->
-    <script
-      src="https://kit.fontawesome.com/{{YOUR KIT KEY}}.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- TYPE JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-      integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- jQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- SWEET ALERT -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </head>
-
-  <body>
-    <!-- Navbar Start-->
-    <nav class="navbar" id="nav-menu">
-      <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-      </div>
-      <div class="max-width">
-        <div class="logo">
-          <a href=""><span>Sarita Kumari</span></a>
-        </div>
-        <ul class="nav-link menu">
-          <li><a href="#home" class="menu-btn nav-link home">Home</a></li>
-          <li><a href="#about" class="menu-btn nav-link about">About</a></li>
-          <li><a href="#skills" class="menu-btn nav-link skills">Skills</a></li>
-          <li>
-            <a href="#projects" class="menu-btn nav-link projects">Projects</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Sarita<span>Kumari</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
           </li>
-          <li>
-            <a href="#contact" class="menu-btn nav-link contact">Contact</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
           </li>
-
-          <li class="nav-link resume">
-            <div id="resume-button-1">
-              <a id="resume-link-1"class="button button--flex" target="_blank">
-                Resume<i class="uil uil-download-alt button__icon"></i>
-              </a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-resume" href="#" id="resume-link-1">
+              Resume <i class="bi bi-download"></i>
+            </a>
           </li>
         </ul>
-        <div class="menu-btn">
-          <i class="material-icons">menu</i>
-        </div>
       </div>
-    </nav>
-    <!-- Scroll to top button -->
-    <button id="btnScrollToTop">
-      <i class="material-icons">arrow_upward</i>
-    </button>
+    </div>
+  </nav>
 
-    <!-- home section start-->
-    <section class="home" id="home">
-      <div class="home-content-model">
-        <div class="home-content">
-          <div class="text-1" data-aos="fade-up">Hello, My name is </div>
-          <div class="text-2" id="user-detail-name">Sarita Kumari</div>
-          <div class="text-3">
-            I'm an <span class="typing" id="user-detail-intro">Aspiring Frontend Web Developer</span>
-          </div>
-          <div id="resume-button-2">
-            <a id="resume-link-2"class="button button--flex" target="_blank">
-              Resume<i class="uil uil-download-alt button__icon"></i>
-            </a>
-          </div>
-        </div>
-        <div class="passport">
-          <img
-            class="home-img"
-            src="./image/portfo.1.jpg"
-            alt="profile-photo"
-          />
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- about section -->
-    <section class="about section" id="about">
-      <div class="max-width">
-        <h2 class="title" data-aos="fade-down">About Me</h2>
-        <div class="about-content">
-          <div class="column left" data-aos="fade-right">
-            <img src="./image/frontend-developer.jpg" alt="" />
-          </div>
-          <div class="column right" data-aos="fade-up">
-            <div class="text">
-              I'm Sarita Kumari and I'm a <span class="typing-2">Frontend Web Developer</span>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="hero-content">
+            <p class="greeting">Hello, I'm</p>
+            <h1 class="name" id="user-detail-name">Sarita<br>Kumari</h1>
+            <h2 class="profession" id="user-detail-intro">Frontend Developer</h2>
+            <div class="hero-btns">
+              <a href="#" id="resume-link-2" class="btn btn-primary me-3">
+                Download CV
+              </a>
+              <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
-            <p class="paragraph" id="user-detail-intro">
-              "Strong foundation in web development. Skilled in HTML, CSS,
-              JavaScript, reactjs, nextjs and various front-end frameworks, with a keen eye for
-              design and user experience. Able to manage projects independently and meet deadlines.
-              A dedicated learner and committed to staying current with emerging
-              web technologies."
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-image">
+            <div class="image-container">
+              <img src="./image/portfo.1.jpg" alt="Sarita Kumari" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2>About Me</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5">
+          <div class="about-image">
+            <img src="./image/frontend-developer.jpg" alt="Frontend Developer" class="img-fluid rounded">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="about-content">
+            <h3>I'm Sarita and I'm a <span id="profession-text">Frontend Developer</span></h3>
+            <p class="lead" id="user-detail-intro">
+              "Strong foundation in web development. Skilled in HTML, CSS, JavaScript, ReactJS, NextJS and various front-end frameworks, with a keen eye for design and user experience. Able to manage projects independently and meet deadlines. A dedicated learner and committed to staying current with emerging web technologies."
             </p>
-            <div id="about_contact">
-              <a href="https://github.com/saritacoder" target="_blank"
-                ><img
-                  src="./image/github_logo.png"
-                  class="github_link"
-                  alt="github"
-              /></a>
-              <a
-                href="https://www.linkedin.com/in/saritakumarii"
-                target="_blank"
-                ><img
-                  src="https://cdn.pixabay.com/photo/2022/10/09/17/32/linkedin-7509708_1280.png"
-                  class="linkdin_link"
-                  alt="linkdin"
-              /></a>
+            <div class="social-links">
+              <a href="https://github.com/saritacoder" target="_blank" class="social-link">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/saritakumarii" target="_blank" class="social-link">
+                <i class="bi bi-linkedin"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- skills section projects -->
-    <section class="skills" id="skills">
-      <div class="max-width" data-aos="fade-down">
-        <h2 class="title" data-aos="fade-up">My Skills</h2>
-        <div class="skills-content skills-card">
-          <div class="column right skill-box">
-            <div class="text skills-card-name">Frontend</div>
-            <div class="icons">
-              <div id="html-icon">
-                <img
-                  class="skills-card-img"
-                  src="image\skill-icons\icons8-html-5.svg"
-                  alt="html"
-                  ,
-                  data-aos="flip-left"
-                />
-                <p style="font-size: 18px">HTML</p>
-              </div>
-              <div id="css-icon">
-                <img
-                  class="skills-card-img"
-                  src="image\skill-icons\icons8-css3.svg"
-                  alt="css"
-                  data-aos="flip-left"
-                />
-                <p style="font-size: 18px">CSS</p>
-              </div>
-              <div id="js-icon">
-                <img
-                  class="skills-card-img"
-                  src="image\skill-icons\icons8-javascript.svg"
-                  alt="js"
-                  data-aos="flip-left"
-                />
-                <p style="font-size: 18px">JavaScript</p>
-              </div>
-              <div id="rjs-icon">
-                <img
-                  style="height: 48px; width: 48px; margin-right: 90px"
-                  class="skills-card-img"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png "
-                  alt="js "
-                  data-aos="flip-left"
-                />
-                <p style="font-size: 18px">ReactJs</p>
-              </div>
-            </div>
-
-            <div class="text skills-card-name">Backend</div>
-            <div class="icons">
-              <!-- <div id="nodejs-icon">
-                <img
-                  class="skills-card-img"
-                  src="image\skill-icons\icons8-nodejs.svg"
-                  alt="nodedjs"
-                  data-aos="flip-left"
-                />
-                <p style="font-size: 18px">Node.js</p>
-              </div> -->
-              <!-- <div id="express-icon" style="width: 10%">
-                <img
-                  class="skills-card-img"
-                  src="image/skill-icons/express-svgrepo-com.svg"
-                  alt="express"
-                  data-aos="flip-left"
-                  style="width: 55%"
-                />
-                <p style="font-size: 18px">Express</p>
-              </div> -->
-              <div id="mongo-icon" style="width: 10%">
-                <img
-                  class="skills-card-img"
-                  src="image/skill-icons/mongodb-svgrepo-com.svg"
-                  alt="mongodb"
-                  data-aos="flip-left"
-                  style="width: 45%"
-                />
-                <p style="font-size: 18px">MongoDB</p>
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2>My Skills</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Frontend Skills -->
+      <div class="skills-container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="skills-card">
+              <div class="skill-item">
+                <div class="skill-icon html-icon">
+                  <i class="bi bi-filetype-html"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>HTML</h4>
+                  <p>Experienced</p>
+                </div>
               </div>
               
-              <div id="nextjs-icon" style="width: 10%">
-                <img
-                  class="skills-card-img"
-                  src="image/skill-icons/next-js.png"
-                  alt="nextjs"
-                  data-aos="flip-left"
-                  style="width: 50%"
-                />
-                <p style="font-size: 14px">Next-js</p>
+              <div class="skill-item">
+                <div class="skill-icon bootstrap-icon">
+                  <i class="bi bi-bootstrap"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Bootstrap</h4>
+                  <p>Experienced</p>
+                </div>
               </div>
-
-              <div id="firebase-icon" style="width: 10%">
-                <img
-                  class="skills-card-img"
-                  src="image/firebase_logo.png"
-                  alt="firebase"
-                  data-aos="flip-left"
-                  style="width: 50%"
-                />
-                <p style="font-size: 14px">FireBase</p>
+              
+              <div class="skill-item">
+                <div class="skill-icon css-icon">
+                  <i class="bi bi-filetype-css"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>CSS</h4>
+                  <p>Experienced</p>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-icon js-icon">
+                  <i class="bi bi-filetype-js"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>JavaScript</h4>
+                  <p>Experienced</p>
+                </div>
               </div>
             </div>
-            <div class="text skills-card-name">Tools & Others</div>
-            <div class="icons">
-              <div id="vscode-icon">
-                <img
-                  class="skills-card-img"
-                  src="image\skill-icons\icons8-visual-studio-code-2019.svg"
-                  alt="vscode"
-                  data-aos="flip-left"
-                />
-                <p style="font-size: 18px">VS Code</p>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="skills-card">
+              <div class="skill-item">
+                <div class="skill-icon react-icon">
+                  <i class="bi bi-filetype-jsx"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>React</h4>
+                  <p>Experienced</p>
+                </div>
               </div>
-              <div id="express-icon" style="width: 10%">
-                <img
-                  class="skills-card-img"
-                  src="image/skill-icons/github.svg"
-                  alt="github"
-                  data-aos="flip-left"
-                  style="width: 50%"
-                />
-                <p style="font-size: 18px">Github</p>
+              
+              <div class="skill-item">
+                <div class="skill-icon express-icon">
+                  <span>ex</span>
+                </div>
+                <div class="skill-info">
+                  <h4>Express</h4>
+                  <p>Experienced</p>
+                </div>
               </div>
-              <div id="postman-icon" style="width: 10%">
-                <img
-                  class="skills-card-img"
-                  src="image/skill-icons/postman-icon-svgrepo-com.svg"
-                  alt="postman"
-                  data-aos="flip-left"
-                  style="width: 45%"
-                />
-                <p style="font-size: 18px">Postman</p>
+              
+              <div class="skill-item">
+                <div class="skill-icon java-icon">
+                  <i class="bi bi-cup-hot"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Java</h4>
+                  <p>Experienced</p>
+                </div>
               </div>
-              <div id="netlify-icon" style="width: 10%">
-                <img
-                  class="skills-card-img"
-                  src="image\skill-icons/netlify-svgrepo-com.svg"
-                  alt="netlify"
-                  data-aos="flip-left"
-                  style="width: 45%"
-                />
-                <p style="font-size: 18px">Netlify</p>
+              
+              <div class="skill-item">
+                <div class="skill-icon node-icon">
+                  <i class="bi bi-node-plus"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Node.js</h4>
+                  <p>Experienced</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-
-
-
-      <!-- <div class="max-width" id="github" data-aos="fade-down">
-        <h2 class="title" data-aos="fade-up" style="margin-top: 20px">
-          Github
-        </h2> 
-        <div class="github-calender react-activity-calendar">
-          <div class="calendar">
-            Loading stuff 
-             Loading the data just for you. 
-          </div>
-        </div>
-       
-        <div id="github-stack">
-          <div
-            class="max-width"
-            data-aos="fade-up"
-            style="
-               display: flex; 
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              margin-top: 20px;
-            "
-          >
-            <img
-              align="center"
-              alt="sarita"
-              src="https://github-readme-streak-stats.herokuapp.com/?user=gitthhuub"
-              id="github-streak-stats"
-              style="max-width: 100%"
-            />
-          </div>
-          <div
-            class="max-width"
-            id="github-streak-status"
-            data-aos="fade-up"
-            style="
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-justify-content:center;
-              margin-top: 20px;
-            "
-          >
-            <img
-              target="_blank"
-              align="center"
-              alt="sarita"
-              src="https://github-readme-stats.vercel.app/api?username=gitthhuub&show_icons=true&amp;locale=en"
-              id="github-stats-card"
-              style="max-width: 100%"
-            />
-          </div>
-          <div
-            class="max-width"
-            id="github-streak-status"
-            data-aos="fade-up"
-            style="
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-justify-content:center;
-              margin-top: 20px;
-            "
-          >
-            <img
-              target="_blank"
-              src="https://github-readme-stats.vercel.app/api/top-langs?username=gitthhuub&show_icons=true&locale=en&layout=compact"
-              id="github-top-langs"
-              align="left"
-              alt="Sarita Kumari"
-              style="max-width: 100%"
-justify-content:center;
-            />
-          </div>
-
         
-        </div>
-      </div> -->
-    </section>
-
-
-
-
-    <!-- projects Section -->
-    <section class="projects" id="projects">
-      <div class="max-width">
-        <h2 class="title" data-aos="fade-down">My Projects</h2>
-        <div class="serv-content">
-          <!-- project-1  -->
-          <div class="card project-card" data-aos="flip-left">
-            <div class="box">
-              <i class="fas fa-laptop-code"></i>
-              <div class="text project-title">Quick-Mart</div>
-              <div class="projectDetails">
-                <div class="projectImg">
-                  <img src="image/project-1pic(2).png" alt="p1" />
-                </div>
-                <div class="projectInfo">
-                  <b class="project-description">
-                   
-"Developed a fully functional e-commerce platform with features like user authentication, product browsing, cart management, and order checkout."
-                  </b>
-                  <div class="techStack">
-                    <img src="image/skill-icons/icons8-html-5.svg" alt="" />
-                    <img src="image/skill-icons/icons8-css3.svg" alt="" />
-                    <img
-                      src="image/skill-icons/icons8-javascript.svg"
-                      alt=""
-                    />
-                    <img src="image/skill-icons/react-icons.svg" alt="react-icon">
-                  <img src="image/firebase_logo.png" alt="firebase">
+        <!-- Tools Section -->
+        <div class="tools-section">
+          <h3 class="tools-title">Tools I have Used</h3>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="skills-card">
+                <div class="skill-item">
+                  <div class="skill-icon git-icon">
+                    <i class="bi bi-git"></i>
                   </div>
-
-                  <div class="links">
-                    <div class="projectLinks">
-                      <a
-                        href="https://github.com/saritacoder/zepto-ecommerce"
-                        class="project-github-link"
-                      >
-                        <b>Github</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/github.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
-                    <div class="projectLinks">
-                      <a
-                        href="https://zepto-ecommerce-six.vercel.app/"
-                        class="project-deployed-link"
-                      >
-                        <b>Live</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/deploy-svgrepo-com.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
+                  <div class="skill-info">
+                    <h4>Git</h4>
+                    <p>Experienced</p>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon postman-icon">
+                    <i class="bi bi-send"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4>Postman</h4>
+                    <p>Experienced</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- project-2  -->
-          <div class="card project-card" data-aos="flip-left">
-            <div class="box">
-              <i class="fas fa-laptop-code"></i>
-              <div class="text project-title">Food app</div>
-              <div class="projectDetails">
-                <div class="projectImg">
-                  <img src="image/project-2pic.png" alt="p2" />
-                </div>
-                <div class="projectInfo">
-                  <b class="project-description">
-                    An food  website where users can explore and buy IT
-                    products.
-                  </b>
-                  <div class="techStack">
-                    <img src="image/skill-icons/icons8-html-5.svg" alt="" />
-                    <img src="image/skill-icons/icons8-css3.svg" alt="" />
-                    <img
-                      src="image/skill-icons/icons8-javascript.svg"
-                      alt=""
-                    />
-                    <img src="image/skill-icons/react-icons.svg" alt="react-icon">
-                    <img src="image/firebase_logo.png" alt="firebase">
+            
+            <div class="col-lg-6">
+              <div class="skills-card">
+                <div class="skill-item">
+                  <div class="skill-icon vscode-icon">
+                    <i class="bi bi-code-square"></i>
                   </div>
-                  <div class="links">
-                    <div class="projectLinks">
-                      <a
-                        href="https://github.com/saritacoder/restaurant-app-sharpner"
-                        class="project-github-link"
-                      >
-                        <b>Github</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/github.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
-                    <div class="projectLinks">
-                      <a
-                        href="https://zepto-ecommerce-53vv.vercel.app/"
-                        class="project-deployed-link"
-                      >
-                        <b>Live</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/deploy-svgrepo-com.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
+                  <div class="skill-info">
+                    <h4>VSCode</h4>
+                    <p>Experienced</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- project-3 -->
-          <div class="card project-card" data-aos="flip-left">
-            <div class="box">
-              <i class="fas fa-laptop-code"></i>
-              <div class="text project-title">Weather app</div>
-              <div class="projectDetails">
-                <div class="projectImg">
-                  <img src="image/project-3pic.png" alt="p3" />
-                </div>
-                <div class="projectInfo">
-                  <b class="project-description">
-                    Users can search for different cities and get instant weather information.
-Built with modern web technologies, the app works seamlessly.
-                  </b>
-                  <div class="techStack">
-                    <img src="image/skill-icons/icons8-html-5.svg" alt="" />
-                    <img src="image/skill-icons/icons8-css3.svg" alt="" />
-                    <img src="image/skill-icons/icons8-javascript.svg"
-                      alt="" />
-                    <!-- <img src="image/firebase_logo.png" alt="">   -->
+                
+                <div class="skill-item">
+                  <div class="skill-icon vite-icon">
+                    <span>V</span>
                   </div>
-
-                  <div class="links">
-                    <div class="projectLinks">
-                      <a
-                        href="https://github.com/saritacoder/weather-app"
-                        class="project-github-link"
-                      >
-                        <b>Github</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/github.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
-                    <div class="projectLinks">
-                      <a
-                        href="https://snazzy-melomakarona-be8346.netlify.app/"
-                        class="project-deployed-link"
-                      >
-                        <b>Live</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/deploy-svgrepo-com.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-              <!-- project-4 -->
-          <div class="card project-card" data-aos="flip-left">
-            <div class="box">
-              <i class="fas fa-laptop-code"></i>
-              <div class="text project-title">Mail-box</div>
-              <div class="projectDetails">
-                <div class="projectImg">
-                  <img src="image/project-4.png" alt="p4" />
-                </div>
-                <div class="projectInfo">
-                  <b class="project-description"
-                    >The Mailbox app is a user-friendly application designed to efficiently manage and organize emails.
-                  </b>
-                  <div class="techStack">
-                    <img src="image/skill-icons/icons8-html-5.svg" alt="" />
-                    <img src="image/skill-icons/icons8-css3.svg" alt="" />
-                    <img
-                      src="image/skill-icons/icons8-javascript.svg"
-                      alt=""
-                    />
-                    <img src="image/skill-icons/react-icons.svg" alt="react-icon">
-                    <img src="image/firebase_logo.png" alt="firebase">
-                  </div>
-
-                  <div class="links">
-                    <div class="projectLinks">
-                      <a
-                        href="https://github.com/saritacoder/mail-box"
-                        class="project-github-link"
-                      >
-                        <b>Github</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/github.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
-                    <div class="projectLinks">
-                      <a
-                        href="https://mail-box-mauve.vercel.app/"
-                        class="project-deployed-link"
-                      >
-                        <b>Live</b>
-                      </a>
-                      <img
-                        src="image/skill-icons/deploy-svgrepo-com.svg"
-                        class="projectBtn"
-                        alt=""
-                      />
-                    </div>
+                  <div class="skill-info">
+                    <h4>Vite</h4>
+                    <p>Experienced</p>
                   </div>
                 </div>
               </div>
@@ -627,77 +287,236 @@ Built with modern web technologies, the app works seamlessly.
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="max-width">
-        <h2 class="title" data-aos="fade-down">Contact</h2>
-        <div class="contact-content">
-          <div class="column left" data-aos="flip-left">
-            <div class="contact-image">
-              <img src="image/contact-free-photo.jpg" alt="contactImg" />
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2>My Projects</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="image/project-1pic(2).png" alt="Quick-Mart" class="img-fluid">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Quick-Mart</h3>
+              <p class="project-description">
+                Developed a fully functional e-commerce platform with features like user authentication, product browsing, cart management, and order checkout.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/saritacoder/zepto-ecommerce" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+                <a href="https://zepto-ecommerce-six.vercel.app/" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="bi bi-link-45deg"></i> Live Demo
+                </a>
+              </div>
             </div>
           </div>
-          <!--right  -->
-          <div class="column right" data-aos="flip-right">
-            <div id="contact-info">
-              <div class="contactList">
-                <div class="contactme" id="contact-email">
-                  <img src="image/email-logo.jpg" alt="" />
-                  <p>sarita44us@gmail.com</p>
-                </div>
-                <div class="contactme" id="contact-phone">
-                  <img src="image/phone-logo.jpg" alt="" />
-                  <p>+91-8521246791</p>
-                </div>
-                <div class="contactme">
-                  <img src="image/address-logo.jpg" alt="" />
-                  <p>Ramgarh, Jharkhand</p>
-                </div>
-                <div class="contact-div">
-                  <a href="https://github.com/saritacoder/" target="_blank"
-                    ><img
-                      id="contact-github"
-                      src="image/github_logo.png"
-                      alt="github"
-                  /></a>
-                  <a
-                    href="https://www.linkedin.com/in/saritakumarii"
-                    target="_blank"
-                    ><img
-                      id="contact-linkedin"
-                      src="image/linkedIn.webp"
-                      alt="linkdin"
-                  /></a>
-                </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="image/project-2pic.png" alt="Food App" class="img-fluid">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Food App</h3>
+              <p class="project-description">
+                A food delivery website where users can explore and order various food items. Features include menu browsing, cart functionality, and checkout process.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/saritacoder/restaurant-app-sharpner" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+                <a href="https://zepto-ecommerce-53vv.vercel.app/" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="bi bi-link-45deg"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="image/project-3pic.png" alt="Weather App" class="img-fluid">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Weather App</h3>
+              <p class="project-description">
+                Users can search for different cities and get instant weather information. Built with modern web technologies, the app works seamlessly.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/saritacoder/weather-app" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+                <a href="https://snazzy-melomakarona-be8346.netlify.app/" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="bi bi-link-45deg"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="col-lg-6 col-md-6 mb-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="image/project-4.png" alt="Mail-box" class="img-fluid">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Mail-box</h3>
+              <p class="project-description">
+                The Mailbox app is a user-friendly application designed to efficiently manage and organize emails.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/saritacoder/mail-box" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+                <a href="https://mail-box-mauve.vercel.app/" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="bi bi-link-45deg"></i> Live Demo
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <script src="script.js"></script>
-    <script>
-      // When the user scrolls the page, execute myFunction
-      window.onscroll = function () {
-        myFunction();
-      };
+    </div>
+  </section>
 
-      function myFunction() {
-        var winScroll =
-          document.body.scrollTop || document.documentElement.scrollTop;
-        var height =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
-      }
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({ easing: "ease-in", delay: 100, duration: 300, offset: 100 });
-      window.addEventListener("load", AOS.refresh);
-    </script>
-  </body>
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2>Contact Me</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="contact-image">
+            <img src="image/contact-free-photo.jpg" alt="Contact" class="img-fluid rounded">
+          </div>
+        </div>
+        
+        <div class="col-lg-7">
+          <div class="contact-info">
+            <div class="contact-item" id="contact-email">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>sarita44us@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item" id="contact-phone">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>+91-8521246791</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Ramgarh, Jharkhand</p>
+              </div>
+            </div>
+            
+            <div class="contact-social">
+              <a href="https://github.com/saritacoder/" target="_blank" class="social-link" id="contact-github">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/saritakumarii" target="_blank" class="social-link" id="contact-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-nav">
+            <a href="#home"><i class="bi bi-house-door"></i> Home</a>
+            <a href="#about"><i class="bi bi-person"></i> About</a>
+            <a href="#skills"><i class="bi bi-code-slash"></i> Skills</a>
+            <a href="#projects"><i class="bi bi-folder"></i> Projects</a>
+            <a href="#contact"><i class="bi bi-envelope"></i> Contact</a>
+            <a href="#" id="resume-link-3"><i class="bi bi-file-earmark-text"></i> Resume</a>
+          </div>
+          <p class="copyright">&copy; 2025 Sarita Kumari. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
 </html>
